@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>走秀网www.zouxiu.com打造奢侈品巅峰平台</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<script></script>
+		<link rel="stylesheet" href="lib/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	    <script type="text/javascript" src="lib/swiper-3.3.1.min.js" ></script>
+	    <script>
+			window.onload=function(){
+				//1.首次加载的时候 调用动态设置rem的api
+				setRemSize();
+				
+				//2.当用户企图更改浏览器宽度 自动获取屏幕宽度 在计算rem赋值给根元素里面的font-size
+				window.addEventListener("resize",setRemSize,false);
+				function setRemSize(){
+				//1.在任何尺寸中都可以获得rem值
+				//获得屏幕的宽度----获取到了rem值    rem=屏幕宽度/6.4+"px"
+				var _clientWidth=document.documentElement.clientWidth/6.4+"px";
+				//console.log(_clientWidth);
+				//将得到的rem值赋值给根元素的font-size
+				document.documentElement.style.fontSize=_clientWidth;
+				}
+			}
+		</script>
+		<script>
+			/****
+			 * 1.在首页进行信息浏览的是 当用户去点击添加到购物车 将用户点击的信息保存到购物车
+			 * 
+			 * 2.实现添加到购物车:1.用户身份验证(登陆和注册)
+			 * 
+			 * 3.登陆和注册以后，将用户信息保存在本地
+			 * 
+			 * 4.当用户点击添加到购物车的时候 ，先读取本地的用户信息 验证是否合法
+			 * 
+			 * 5.如果合法 就将用户点击的商品信息，连同用户id,商品数量提交给服务器，
+			 * 然后我们点击购物车就可以查看购物车具体信息
+			 * 
+			 * 6.如果验证失败 提升用户重新登陆
+			 * 
+			 * 
+			 */
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/app.js" ></script>
+	</body>
+</html>
